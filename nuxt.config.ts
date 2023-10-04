@@ -64,24 +64,24 @@ export default defineNuxtConfig({
       favicon: "/img/favicon.png",
       getPostsLimit: 30, // number of posts to fetch from Orbis in the getPosts() function
       governanceUrl: "", // governance url (snapshot, Tally, etc.)
-      iggyPostAddress: "",
-      iggyPostMinterAddress: "",
-      iggyPostStatsAddress: "",
+      iggyPostAddress: "0x8032d7a2b57B3F46861b0A46cE43DEc8281471C5",
+      iggyPostMinterAddress: "0x3A5e015f3518f3A48820644231d186538606FF94",
+      iggyPostStatsAddress: "0xDA07Ef226E212f548979339BFEb13160C1d52f30",
       keysAddress: "", // FriendKeys contract address 
       keysContext: "kjzl6cwe1jw146hahweqyxj4lwx0ffppekru48wiedk11nch15bg1ygmwfdz0cs",
       keysFeatured: ["admin", "tempe", "tekr"],
       linkPreviews: "netlify", // "netlify" or "microlink" (or leave empty for no link previews)
       lpTokenAddress: "", // liquidity pool token (token to stake in the staking contract)
       lpTokenSymbol: "LP tokens", // LP token symbol
-      marketplacePostNftUrl: "https://testnets.opensea.io/assets/mumbai/0x63FE8216a66737CFE474DF3949F9081EbD4Bd800",
-      marketplacePostNftItemUrl: "https://testnets.opensea.io/assets/mumbai/0x63FE8216a66737CFE474DF3949F9081EbD4Bd800/", // url (append nft id to it)
-      marketplaceNftCollectionBaseUrl: "https://testnets.opensea.io/assets/mumbai/", // url (append nft address to it)
+      marketplacePostNftUrl: "https://opensea.io/assets/base/0x8032d7a2b57B3F46861b0A46cE43DEc8281471C5",
+      marketplacePostNftItemUrl: "https://opensea.io/assets/base/0x8032d7a2b57B3F46861b0A46cE43DEc8281471C5/", // url (append nft id to it)
+      marketplaceNftCollectionBaseUrl: "https://opensea.io/assets/base/", // url (append nft address to it)
       maxImageUploadSizeMb: 1, // max image upload size in MB
       newsletterLink: "",
       nftDefaultRatio: 1, // default ratio for the NFT price bonding curve
       nftLaunchpadBondingAddress: "", // NFT launchpad with bonding curve contract address
       nftLaunchpadLatestItems: 8, // number of latest NFTs to show in the NFT launchpad
-      nftOrbisContext: "kjzl6cwe1jw1490l9agydb0vh2x0mddzxbsmga7s3yhl86utbhwne6zkhpikytw", // Orbis context for NFT collection pages
+      nftOrbisContext: "kjzl6cwe1jw145x3vl4u9xe2ymk7b9yeed5zj4rztha58vj2h7wiu7jg9sau018", // Orbis context for NFT collection pages
       orbisCategories: [ // use only alphanumeric ASCII characters for slugs! (no spaces, only dash is allowed)
         { "slug": "all", "title": "All posts", "hidden": false }, // not a real tag, just denotes the absence of a tag (always keep it here)
         { "slug": "general", "title": "General discussion", "hidden": false },

@@ -1,9 +1,8 @@
-# Iggy Social Template
+# BasePunk Chat
 
-Iggy Social is a Web3 Social frontend website based on the Iggy Social template. It uses [Orbis SDK](https://github.com/OrbisWeb3/orbis-sdk) and Ceramic Network in the background.
+BasePunk Chat is a Web3 Social frontend website for BasePunk NFT community based on the [Iggy Social](https://iggy.social) template. It uses [Orbis SDK](https://github.com/OrbisWeb3/orbis-sdk) and Ceramic Network in the background. For domains it uses the [Punk Domains](https://punk.domains) protocol.
 
-Demo 1 (Netlify): https://demo.iggy.social/
-Demo 2 (Vercel): https://demo2.iggy.social/
+URL: https://chat.basepunk.xyz/
 
 What's included:
 
