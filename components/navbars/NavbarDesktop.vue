@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-bg-custom">
     <div class="container-fluid mx-3">
       <NuxtLink class="navbar-brand" to="/">
-        BasePunk Chat
+        {{ $config.projectName }}
       </NuxtLink>
 
       <ul class="navbar-nav justify-content-end flex-grow-1">

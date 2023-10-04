@@ -29,6 +29,10 @@ export default defineNuxtPlugin(() => {
       return "Optimism Goerli Testnet";
     } else if (chainId === 4002) {
       return "Fantom Testnet";
+    } else if (chainId === 5001) {
+      return "Mantle Testnet";
+    } else if (chainId === 8453) {
+      return "Base";
     } else if (chainId === 42161) {
       return "Arbitrum";
     } else if (chainId === 421611) {
@@ -56,8 +60,8 @@ export default defineNuxtPlugin(() => {
     }
 
     let urls = [
-      // getRpcs2()[networkId],
-      mainRpc
+      mainRpc,
+      //getRpcs2()[networkId],
     ];
 
     if (urls) {
@@ -206,6 +210,26 @@ export default defineNuxtPlugin(() => {
         nativeCurrency: { decimals: 18, name: "FLR", symbol: "FLR" }, 
         rpcUrls: [getRpcs2()[networkId]]
       }] 
+    } else if (networkName == "Mantle Testnet") {
+      networkId = 5001;
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://explorer.testnet.mantle.xyz" ],
+        chainId: ethers.utils.hexValue(networkId),
+        chainName: networkName,
+        nativeCurrency: { decimals: 18, name: "MNT", symbol: "MNT" }, 
+        rpcUrls: [getRpcs2()[networkId]]
+      }] 
+    } else if (networkName == "Base") {
+      networkId = 8453;
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://basescan.org" ],
+        chainId: ethers.utils.hexValue(networkId),
+        chainName: networkName,
+        nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
+        rpcUrls: [getRpcs()[networkId]]
+      }] 
     }
 
     return { 
@@ -222,4 +246,3 @@ export default defineNuxtPlugin(() => {
     }
   }
 });
-

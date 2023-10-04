@@ -7,7 +7,7 @@
       </button>
 
       <NuxtLink class="navbar-brand mx-auto" to="/">
-        BasePunk Chat
+        {{ $config.projectName }}
       </NuxtLink>
 
       <button @click="toggleRightSidebar" class="nav-item btn navbar-toggler nav-btn-right" type="button">

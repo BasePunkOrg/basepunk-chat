@@ -69,7 +69,8 @@ export default {
       price2char: null,
       price3char: null,
       price4char: null,
-      price5char: null
+      price5char: null,
+      price6char: null
     }
   },
 
@@ -186,13 +187,15 @@ export default {
           return this.price3char;
         } else if (this.domainName.match(/./gu).length === 4) {
           return this.price4char;
-        } else if (this.domainName.match(/./gu).length >= 5) {
+        } else if (this.domainName.match(/./gu).length === 5) {
           return this.price5char;
+        } else if (this.domainName.match(/./gu).length >= 6) {
+          return this.price6char;
         } else {
-          return this.price5char;
+          return this.price6char;
         }
       } else {
-        return this.price5char;
+        return this.price6char;
       }
     }
   },
@@ -214,6 +217,7 @@ export default {
         "function price3char() view returns (uint256)",
         "function price4char() view returns (uint256)",
         "function price5char() view returns (uint256)",
+        "function price6char() view returns (uint256)",
         "function referral() view returns (uint256)", // TLD-specific function
         "function referralFee() view returns (uint256)" // minter-specific function
       ]);
@@ -240,12 +244,13 @@ export default {
       // fetch price(s)
       if (this.$config.punkNumberOfPrices === 1) {
         this.price = ethers.utils.formatUnits(await contract.price(), this.$config.tokenDecimals);
-      } else if (this.$config.punkNumberOfPrices === 5) {
+      } else if (this.$config.punkNumberOfPrices === 6) {
         this.price1char = ethers.utils.formatUnits(await contract.price1char(), this.$config.tokenDecimals);
         this.price2char = ethers.utils.formatUnits(await contract.price2char(), this.$config.tokenDecimals);
         this.price3char = ethers.utils.formatUnits(await contract.price3char(), this.$config.tokenDecimals);
         this.price4char = ethers.utils.formatUnits(await contract.price4char(), this.$config.tokenDecimals);
         this.price5char = ethers.utils.formatUnits(await contract.price5char(), this.$config.tokenDecimals);
+        this.price6char = ethers.utils.formatUnits(await contract.price6char(), this.$config.tokenDecimals);
       }
 
       // fetch referral fee

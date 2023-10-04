@@ -10,10 +10,17 @@
         <i class="bi bi-arrow-left-circle cursor-pointer"></i>
       </p>
 
-      <h3 class="mb-3 mt-3">Web3 Social is here.</h3>
+      <h3 class="mb-3 mt-3">Welcome to the future.</h3>
 
       <p class="text-break mt-3">
-        Iggy Social Demo is showcase of an open-source template that anyone can use to build their own web3 social app.
+        BasePunk is presenting a new way of social media. A web3 social network built on top of decentralized technologies
+        such as 
+        <a href="https://base.org/" target="_blank">Base</a>, 
+        <a href="https://ipfs.tech/" target="_blank">IPFS</a>, 
+        <a href="https://ceramic.network/" target="_blank">Ceramic Network</a>, 
+        <a href="https://useorbis.com/" target="_blank">Orbis</a>, 
+        <a href="https://punk.domains/" target="_blank">Punk Domains</a>, and
+        <a href="https://iggy.social/" target="_blank">Iggy Social</a>.
       </p>
 
       <p class="text-break mt-3">
@@ -22,45 +29,18 @@
       </p>
 
       <p class="text-break mt-3">
-        Let's leave the old world of corporation-controlled social media behind us and move towards a decentralized future. 
+        Let's leave the old world of corporation-controlled social media behind us and move towards a decentralized basepunk future. 
         We promise, it's going to be a lot of fun!
       </p>
 
-      <p class="text-break mt-3">
-        Brought to you by the 
-        <a target="_blank" href="https://punk.domains">Punk Domains</a> team.
-      </p>
-
-      <h5>Useful links</h5>
+      <h5>Links</h5>
 
       <ul>
-        <li><a href="https://github.com/iggy-social" target="_blank">Iggy Social GitHub</a></li>
-        <li><a href="https://github.com/punk-domains" target="_blank">Punk Domains GitHub</a></li>
-        <li><a href="https://discord.gg/8dSrwrAQeu" target="_blank">Discord</a></li>
+        <li><a href="https://discord.gg/basepunk" target="_blank">Discord</a></li>
+        <li><a href="https://twitter.com/Punkonbase" target="_blank">Twitter</a></li>
+        <li><a href="https://medium.com/@punkonbase/" target="_blank">Blog</a></li>
+        <li><a href="https://github.com/BasePunkOrg" target="_blank">GitHub</a></li>
       </ul>
-
-      <h5>Tech stack</h5>
-
-      <p class="text-break mt-3">
-        This chat is built on top of various decentralized and open source technologies, such as:
-      </p>
-
-      <ul>
-        <li><a href="https://ipfs.tech/" target="_blank">IPFS</a></li>
-        <li><a href="https://ceramic.network/" target="_blank">Ceramic Network</a></li>
-        <li><a href="https://useorbis.com/" target="_blank">Orbis</a></li>
-        <li><a href="https://punk.domains/" target="_blank">Punk Domains</a></li>
-        <li><a href="https://iggy.social/" target="_blank">Iggy Social</a></li>
-        <li>... and others.</li>
-      </ul>
-
-      <hr />
-
-      <h5>Feedback</h5>
-
-      <p class="text-break mt-3">
-        Feel free to post ideas, features suggestions, rants directly in this chat. 
-      </p>
 
     </div>
   </div>
