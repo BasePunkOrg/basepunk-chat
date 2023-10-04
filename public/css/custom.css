@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap');
 @import "./dark.css";
 @import "./light.css";
 
@@ -307,6 +307,10 @@ body {
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: var(--bs-body-color);
+}
+
 .hover-color:hover {
   color: var(--bs-primary);
 }
@@ -373,8 +377,11 @@ body {
 */
 
 .navbar-brand, .navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
-  color: var(--bs-primary);
-  font-family: "Fredoka One", Arial, sans-serif;
+  color: var(--bs-nav-link-color);
+  font-family: "Darker Grotesque", Arial, sans-serif;
+  font-size: 35px;
+  font-weight: 800;
+  font-style: italic;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {

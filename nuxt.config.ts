@@ -61,7 +61,7 @@ export default defineNuxtConfig({
       domainRequiredToPost: true,
       expiryCollections: 1000 * 60 * 60 * 24 * 7, // must be in milliseconds (0 means no expiration)
       expiryUsernames: 1000 * 60 * 60 * 24 * 7, // must be in milliseconds (0 means no expiration)
-      favicon: "/img/favicon.svg",
+      favicon: "/img/favicon.png",
       getPostsLimit: 30, // number of posts to fetch from Orbis in the getPosts() function
       governanceUrl: "https://snapshot.org/#/sgbchat.eth", // governance url (snapshot, Tally, etc.)
       iggyPostAddress: "0x63FE8216a66737CFE474DF3949F9081EbD4Bd800",
@@ -96,15 +96,15 @@ export default defineNuxtConfig({
       orbisContext: "kjzl6cwe1jw14b86b0dwz8x7ribwcn9tsull1bphner0nyfdwxsqnohbtrrvgtl", // production context
       orbisTest: false, // if true, test context will be used instead of the production one
       orbisTestContext: "kjzl6cwe1jw145tfqv2eqv8tiz6puo27meyz4smz40atppuc13tulqca87k35z2", // test context
-      previewImage: "/img/cover.png",
-      previewImageAirdrop: "/img/cover-airdrop.png",
-      previewImageNftCollection: "/img/cover-nft-collection.png",
-      previewImageNftCreate: "/img/cover-nft-create.png",
-      previewImageNftLaunchpad: "/img/cover-nft-launchpad.png",
-      previewImagePost: "/img/cover-post.png",
-      previewImagePostNft: "/img/cover-post-nft.png",
-      previewImageProfile: "/img/cover-profile.png",
-      previewImageStake: "/img/cover-stake.png",
+      previewImage: "/img/cover.jpg",
+      previewImageAirdrop: "/img/cover-airdrop.jpg",
+      previewImageNftCollection: "/img/cover-nft-collection.jpg",
+      previewImageNftCreate: "/img/cover-nft-create.jpg",
+      previewImageNftLaunchpad: "/img/cover-nft-launchpad.jpg",
+      previewImagePost: "/img/cover-post.jpg",
+      previewImagePostNft: "/img/cover-post-nft.jpg",
+      previewImageProfile: "/img/cover-profile.jpg",
+      previewImageStake: "/img/cover-stake.jpg",
       profileMintedPostIdsMax: 36, // max number of minted post ids to show in the profile page
       projectMetadataTitle: "Iggy Social Demo | Web3 Social Template For Your DAO",
       projectName: "Iggy Demo",
