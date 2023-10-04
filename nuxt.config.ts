@@ -50,8 +50,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      activityPointsAddress: "",
-      activityPointsRatio: 1_000_000, 
+      activityPointsAddress: "0x148088d4255C59E1088e37E7c2FE56F11e4c4f29",
+      activityPointsRatio: 100_000, 
       airdropApAddress: "", // chat token claim for APs
       airdropClaimDomainsAddress: "", // chat token claim for domain holders
       blockExplorerBaseUrl: "https://basescan.org",
@@ -67,7 +67,7 @@ export default defineNuxtConfig({
       iggyPostAddress: "0x8032d7a2b57B3F46861b0A46cE43DEc8281471C5",
       iggyPostMinterAddress: "0x3A5e015f3518f3A48820644231d186538606FF94",
       iggyPostStatsAddress: "0xDA07Ef226E212f548979339BFEb13160C1d52f30",
-      keysAddress: "", // FriendKeys contract address 
+      keysAddress: "0x9904CE72Cd7427F59bBe53bc69211081159fcf0a", // FriendKeys contract address 
       keysContext: "kjzl6cwe1jw146hahweqyxj4lwx0ffppekru48wiedk11nch15bg1ygmwfdz0cs",
       keysFeatured: ["admin", "tempe", "tekr"],
       linkPreviews: "netlify", // "netlify" or "microlink" (or leave empty for no link previews)
