@@ -89,7 +89,7 @@ export default defineNuxtConfig({
         { "slug": "nfts", "title": "Memes & NFTs", "hidden": false }, // keep this category for the purpose of the NFT launchpad
         { "slug": "governance", "title": "Governance", "hidden": true },
         { "slug": "food", "title": "Food & recipes", "hidden": true },
-        { "slug": "movie", "title": "Movies & Music", "hidden": false },
+        { "slug": "movie", "title": "Movies & Music", "hidden": true },
         { "slug": "music", "title": "Music", "hidden": true },
         { "slug": "random", "title": "Random", "hidden": false },
       ],
@@ -130,7 +130,7 @@ export default defineNuxtConfig({
         "spotify": false
       }, 
       showRepliesOnHomepage: true, // show replies on the homepage  
-      sidebarLeftSticky: false, // make the left sidebar sticky (always visible)
+      sidebarLeftSticky: true, // make the left sidebar sticky (always visible)
       spotifyPlaylistId: "5y7f2Wxfq49G5KuNQfMPbk", // enter just the ID of the playlist (not the full URL)  
       stakingContractAddress: "0x96Dc7548fD018d1E51d2d5e98B265411C3D0F22A", // this is also the stake/gov token address
       stakeTokenSymbol: "IGT", // stake token symbol (governance token symbol)
