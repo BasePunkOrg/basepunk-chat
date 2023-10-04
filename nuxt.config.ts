@@ -79,7 +79,7 @@ export default defineNuxtConfig({
       maxImageUploadSizeMb: 1, // max image upload size in MB
       newsletterLink: "",
       nftDefaultRatio: 1, // default ratio for the NFT price bonding curve
-      nftLaunchpadBondingAddress: "", // NFT launchpad with bonding curve contract address
+      nftLaunchpadBondingAddress: "0xe7d4643aEB94117D9c2bc023aa28243264D448eE", // NFT launchpad with bonding curve contract address
       nftLaunchpadLatestItems: 8, // number of latest NFTs to show in the NFT launchpad
       nftOrbisContext: "kjzl6cwe1jw145x3vl4u9xe2ymk7b9yeed5zj4rztha58vj2h7wiu7jg9sau018", // Orbis context for NFT collection pages
       orbisCategories: [ // use only alphanumeric ASCII characters for slugs! (no spaces, only dash is allowed)
