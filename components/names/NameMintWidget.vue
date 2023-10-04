@@ -39,6 +39,8 @@
     <ConnectWalletButton v-if="!isActivated" class="btn btn-outline-primary mt-2 mb-2" btnText="Connect Wallet" />
     
   </div>
+
+  <hr />
 </div>
 </template>
 

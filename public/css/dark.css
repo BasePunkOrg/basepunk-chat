@@ -10,7 +10,7 @@
   --bs-gray-900: #fff;
   --bs-body-bg: #222529;
   --bs-body-bg-rgb: #222529;
-  --bs-body-color: #a1a1a8;
+  --bs-body-color: #f0f0f6;
   --bs-mode: #191b1d;
   --bs-border-color: rgba(255, 255, 255, 0.07);
   --bs-link-hover-color-rgb: 122, 109, 235;
@@ -60,11 +60,11 @@
 }
 
 [data-bs-theme=dark] .bg-light {
-  background-color: var(--bs-light) !important;
+  background-color: transparent !important;
 }
 
 [data-bs-theme=dark] .bg-mode {
-  background-color: var(--bs-mode) !important;
+  background-color: transparent !important;
 }
 
 [data-bs-theme=dark] .navbar {
@@ -123,16 +123,12 @@
   fill: var(--bs-primary) !important;
 }
 
-[data-bs-theme=dark] .bg-light{
-  background-color: var(--bs-light) !important;
-}
-
 [data-bs-theme=dark] .border-light{
   border-color: var(--bs-light) !important
 }
 
 [data-bs-theme=dark] .bg-body{
-  background-color: var(--bs-body-bg) !important;
+  background-color: transparent !important;
 }
 
 [data-bs-theme=dark] .shadow, .shadow-lg, .shadow-sm {

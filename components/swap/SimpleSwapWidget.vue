@@ -13,6 +13,7 @@
     />
 
   </div>
+  <hr />
 </div>
 </template>
 

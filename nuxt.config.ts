@@ -69,7 +69,7 @@ export default defineNuxtConfig({
       iggyPostStatsAddress: "0xFCF878b629fF0Ef3bC033eFfCfFD39B00c9a68C5",
       keysAddress: "0x34E7D66455BE3f6f0cCbF3df3b7c56b482530C8E", // FriendKeys contract address 
       keysContext: "kjzl6cwe1jw14akr2rh1j3fhup1ewfr2uyyd6l85qllbe2d5fxywt7d8rqnau6j",
-      keysFeatured: ["tempe", "tekr"],
+      keysFeatured: ["admin", "tempe", "tekr"],
       linkPreviews: "netlify", // "netlify" or "microlink" (or leave empty for no link previews)
       lpTokenAddress: "0xF874f79eBfB8FEe898a289C4cAa5dc4383873431", // liquidity pool token (token to stake in the staking contract)
       lpTokenSymbol: "LP tokens", // LP token symbol
@@ -118,11 +118,11 @@ export default defineNuxtConfig({
       rpcCustom: process.env.RPC_CUSTOM || "", // Custom RPC URL
       showFeatures: { // show/hide features in sidebars (if you have too many "true", make the sidebar scrollable --> sidebarLeftSticky: false)
         "activityPoints": true, 
-        "airdrop": true, 
-        "friendKeys": true, 
+        "airdrop": false, 
+        "friendKeys": false, 
         "governance": false,
         "newsletter": false, 
-        "nftLaunchpad": true, 
+        "nftLaunchpad": false, 
         "randomMintedPosts": true, 
         "swap": false, 
         "stake": false, 
@@ -130,7 +130,7 @@ export default defineNuxtConfig({
         "spotify": false
       }, 
       showRepliesOnHomepage: true, // show replies on the homepage  
-      sidebarLeftSticky: true, // make the left sidebar sticky (always visible)
+      sidebarLeftSticky: false, // make the left sidebar sticky (always visible)
       spotifyPlaylistId: "5y7f2Wxfq49G5KuNQfMPbk", // enter just the ID of the playlist (not the full URL)  
       stakingContractAddress: "0x96Dc7548fD018d1E51d2d5e98B265411C3D0F22A", // this is also the stake/gov token address
       stakeTokenSymbol: "IGT", // stake token symbol (governance token symbol)
