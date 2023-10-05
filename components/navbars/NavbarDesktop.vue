@@ -34,6 +34,19 @@
           </div>
         </li>
 
+        <!-- Color mode switcher -->
+        <!-- 
+        <li class="nav-item cursor-pointer">
+          <span class="nav-link" v-if="siteStore.getColorMode === 'dark'" @click="changeColorMode('light')">
+            <i class="bi bi-brightness-high"></i>
+          </span>
+
+          <span class="nav-link" v-if="siteStore.getColorMode === 'light'" @click="changeColorMode('dark')">
+            <i class="bi bi-moon-fill"></i>
+          </span>
+        </li>
+        -->
+
       </ul>
     </div>
   </nav>
