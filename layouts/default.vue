@@ -269,6 +269,20 @@ export default {
       }
     },
 
+    async fetchNftOwnership() {
+      if (this.$config.projectNftAddress) {
+        const nftInterface = new ethers.utils.Interface([
+          "function balanceOf(address owner) view returns (uint256)",
+        ]);
+
+        const nftContract = new ethers.Contract(this.$config.projectNftAddress, nftInterface, this.signer);
+
+        const balance = await nftContract.balanceOf(this.address);
+
+        this.userStore.setProjectNftBalance(Number(balance));
+      }
+    },
+
     async fetchOrbisNotifications() {
       if (this.userStore.getIsConnectedToOrbis) {
         this.notificationsStore.setLoadingNotifications(true);
@@ -353,6 +367,7 @@ export default {
           this.userStore.setDefaultDomain(null);
         }
 
+        this.fetchNftOwnership();
         this.fetchActivityPoints();
         this.fetchChatTokenBalance();
       }

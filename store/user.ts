@@ -18,12 +18,17 @@ export const useUserStore = defineStore({
       lastActivityTimestamp: null,
       lpTokenBalanceWei: BigInt(0),
       orbisImage: null,
+      projectNftBalance: 0, // how many project NFTs the user holds
       stakeTokenBalanceWei: BigInt(0) // receipt token from the staking contract (aka governance token)
     }
   },
 
   getters: {
     getCurentUserActivityPoints(state) {
+      if (state.projectNftBalance > 0) {
+        return state.activityPoints * 10; // 10 is activity points multiplier for project NFT holders
+      }
+
       return state.activityPoints;
     },
 
@@ -77,6 +82,10 @@ export const useUserStore = defineStore({
 
     getOrbisImage(state) {
       return state.orbisImage;
+    },
+
+    getProjectNftBalance(state) {
+      return state.projectNftBalance;
     },
 
     getStakeTokenBalanceWei(state) {
@@ -143,6 +152,10 @@ export const useUserStore = defineStore({
 
     setOrbisImage(image: any) {
       this.orbisImage = image;
+    },
+
+    setProjectNftBalance(balance: any) {
+      this.projectNftBalance = Number(balance);
     },
 
     setStakeTokenBalanceWei(balance: ethers.BigNumber) {

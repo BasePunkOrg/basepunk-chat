@@ -51,7 +51,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       activityPointsAddress: "0x148088d4255C59E1088e37E7c2FE56F11e4c4f29",
-      activityPointsRatio: 100_000, 
+      activityPointsRatio: 10_000, 
       airdropApAddress: "", // chat token claim for APs
       airdropClaimDomainsAddress: "", // chat token claim for domain holders
       blockExplorerBaseUrl: "https://basescan.org",
@@ -106,9 +106,10 @@ export default defineNuxtConfig({
       previewImageProfile: "/img/cover-profile.jpg",
       previewImageStake: "/img/cover-stake.jpg",
       profileMintedPostIdsMax: 36, // max number of minted post ids to show in the profile page
+      projectDescription: "Join the BasePunk NFT community, chat with other BasePunks and earn activity points!",
       projectMetadataTitle: "BasePunk Chat | Web3 Social App For BasePunk NFT Community",
       projectName: "BasePunk Chat",
-      projectDescription: "Join the BasePunk NFT community, chat with other BasePunks and earn activity points!",
+      projectNftAddress: "0x89290b2FaD76bF4a6Ed9D8066f644d45530FA920", // if a project is NFT community around a specific NFT, enter the NFT address here
       projectTwitter: "https://twitter.com/Punkonbase",
       projectUrl: "https://chat.basepunk.xyz", // without trailing slash!
       punkMinterAddress: "0xB5c4A61D3cAaa0dFFFAC59276DD219dD6Ba3DEFB", // punk domain minter contract address
