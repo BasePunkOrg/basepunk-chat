@@ -13,7 +13,7 @@
     />
 
   </div>
-  <hr />
+  <hr class="widget-line" />
 </div>
 </template>
 

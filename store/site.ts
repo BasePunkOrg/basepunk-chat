@@ -6,7 +6,7 @@ export const useSiteStore = defineStore({
 
   state: () => {
     return {
-      colorMode: "dark",
+      colorMode: "punk",
       showOnlyMasterPosts: useLocalStorage('showOnlyMasterPosts', "false"),
       slippage: "0.5", // percentage (%)
       swapDeadline: "20" // minutes
