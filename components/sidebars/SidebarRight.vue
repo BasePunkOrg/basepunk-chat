@@ -3,6 +3,23 @@
   <div id="sidebar2" class="collapse collapse-horizontal" :class="{ show: sidebarStore.showRightSidebar }">
     <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start min-vh-100">
 
+      <div class="card m-2 bg-light" v-if="isMobile">
+      <div class="card-body sidebar-card-body mt-4">
+      <div class="d-grid gap-2">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Theme: {{ String(siteStore.getColorMode).charAt(0).toUpperCase() }}{{ String(siteStore.getColorMode).slice(1) }}
+          </button>
+          <ul class="dropdown-menu">
+            <li><span class="dropdown-item cursor-pointer" @click="changeColorMode('dark')">Dark</span></li>
+            <li><span class="dropdown-item cursor-pointer" @click="changeColorMode('light')">Light</span></li>
+            <li><span class="dropdown-item cursor-pointer" @click="changeColorMode('punk')">Punk</span></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      </div>
+
       <!-- Mint/register a domain name -->
       <NameMintWidget />
 
@@ -47,6 +64,7 @@
 <script>
 import tokens from '~/assets/data/tokens.json';
 import { useSidebarStore } from '~/store/sidebars';
+import { useSiteStore } from '~/store/site';
 import MintedPostsWidget from '~/components/minted-posts/MintedPostsWidget.vue';
 import NameMintWidget from '~/components/names/NameMintWidget.vue';
 import SimpleSwapWidget from '~/components/swap/SimpleSwapWidget.vue';
@@ -64,6 +82,11 @@ export default {
     },
 
     methods: {
+      changeColorMode(newMode) {
+        this.siteStore.setColorMode(newMode);
+        document.documentElement.setAttribute("data-bs-theme", this.siteStore.getColorMode);
+      },
+
       closeRightSidebar() {
         if (this.isMobile) {
           //this.rSidebar.hide();
@@ -75,7 +98,9 @@ export default {
 
     setup() {
         const sidebarStore = useSidebarStore();
-        return { sidebarStore, tokens };
+        const siteStore = useSiteStore();
+
+        return { sidebarStore, siteStore, tokens };
     }
 }
 </script>
