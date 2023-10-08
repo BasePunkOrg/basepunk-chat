@@ -29,7 +29,7 @@
           <!-- Activity Points -->
           <button 
             v-if="userStore.getCurentUserActivityPoints > 0 && $config.activityPointsAddress" 
-            class="btn btn-outline-primary btn-sm mt-2 mb-2" 
+            class="btn btn-primary btn-sm mt-2 mb-2" 
             @click="fetchActivityPoints"
           >
             {{ userStore.getCurentUserActivityPoints }} AP

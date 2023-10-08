@@ -204,3 +204,7 @@
   --bs-table-bg: var(--bs-light);
   --bs-table-color: var(--bs-gray-900);
 }
+
+[data-bs-theme=punk] .text-muted {
+  color: #efeff0bf !important;
+}
