@@ -90,6 +90,13 @@
   filter: invert(1) grayscale(100%) brightness(300%);
 }
 
+[data-bs-theme=punk] .btn-primary:hover {
+  color: #020722;
+  background: #4ccbc9;
+  /*border: 2px solid #4ccbc9;
+  box-shadow: 0 0 0 0.2rem #4ccbc9;*/
+}
+
 [data-bs-theme=punk] .card {
   background-color: transparent;
   color: var(--bs-body-color);
