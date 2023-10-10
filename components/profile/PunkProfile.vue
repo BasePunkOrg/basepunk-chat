@@ -363,6 +363,8 @@ export default {
   },
 
   methods: {
+    getTextWithoutBlankCharacters,
+    
     changeCurrentTab(tab) {
       this.currentTab = tab;
       localStorage.setItem("profileCurrentTab", tab);
