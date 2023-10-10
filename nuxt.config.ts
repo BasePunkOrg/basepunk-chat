@@ -83,8 +83,9 @@ export default defineNuxtConfig({
       nftLaunchpadLatestItems: 8, // number of latest NFTs to show in the NFT launchpad
       nftOrbisContext: "kjzl6cwe1jw145x3vl4u9xe2ymk7b9yeed5zj4rztha58vj2h7wiu7jg9sau018", // Orbis context for NFT collection pages
       orbisCategories: [ // use only alphanumeric ASCII characters for slugs! (no spaces, only dash is allowed)
-        { "slug": "all", "title": "All posts", "hidden": false }, // not a real tag, just denotes the absence of a tag (always keep it here)
+        { "slug": "all", "title": "All posts", "hidden": true }, // not a real tag, just denotes the absence of a tag (always keep it here)
         { "slug": "general", "title": "General discussion", "hidden": false },
+        { "slug": "gm", "title": "GM/GN", "hidden": false },
         { "slug": "shill", "title": "Shill & discuss projects", "hidden": true },
         { "slug": "nfts", "title": "Memes & NFTs", "hidden": false }, // keep this category for the purpose of the NFT launchpad
         { "slug": "governance", "title": "Governance", "hidden": true },
