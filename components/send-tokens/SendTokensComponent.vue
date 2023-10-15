@@ -63,13 +63,13 @@
     <div class="d-flex justify-content-center mt-4">
 
       <!-- Connect Wallet button -->
-      <ConnectWalletButton v-if="!isActivated" class="btn btn-outline-primary" btnText="Connect wallet" />
+      <ConnectWalletButton v-if="!isActivated" class="btn btn-primary" btnText="Connect wallet" />
 
       <!-- Disabled Send tokens button (if not input amount is entered) -->
       <button
         v-if="isActivated && !inputTokenAmount && isSupportedNetwork"
         :disabled="true" 
-        class="btn btn-outline-primary" 
+        class="btn btn-primary" 
         type="button"
       >
         Send tokens
@@ -79,7 +79,7 @@
       <button
         v-if="isActivated && inputTokenAmount && inputAmountLessThanBalance && isSupportedNetwork"
         :disabled="waiting || !inputToken || !inputTokenAmount || !isActivated || !inputAmountLessThanBalance || !inputReceiver || !isSupportedNetwork" 
-        class="btn btn-outline-primary" 
+        class="btn btn-primary" 
         type="button"
         @click="send"
       >
@@ -91,7 +91,7 @@
       <button
         v-if="isActivated && inputTokenAmount && !inputAmountLessThanBalance && isSupportedNetwork"
         :disabled="true" 
-        class="btn btn-outline-primary" 
+        class="btn btn-primary" 
         type="button"
       >
         Balance too low
@@ -101,7 +101,7 @@
       <button
         v-if="isActivated && !isSupportedNetwork"
         :disabled="true" 
-        class="btn btn-outline-primary" 
+        class="btn btn-primary" 
         type="button"
       >
         Wrong network

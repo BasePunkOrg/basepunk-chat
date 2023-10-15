@@ -70,6 +70,20 @@
             </NuxtLink>
           </li>
 
+          <!-- Activity Points -->
+          <li class="nav-item p-1" @click="closeLeftSidebar" v-if="$config.showFeatures.activityPoints && $config.activityPointsAddress">
+            <NuxtLink class="nav-link" :class="$route.path.startsWith('/activity-points') ? 'active' : ''" aria-current="page" to="/activity-points">
+              <i class="bi bi-award"></i> Activity Points
+            </NuxtLink>
+          </li>
+
+          <!-- Send tokens -->
+          <li class="nav-item p-1" @click="closeLeftSidebar" v-if="$config.showFeatures.sendTokens">
+            <NuxtLink class="nav-link" :class="$route.path.startsWith('/send-tokens') ? 'active' : ''" aria-current="page" to="/send-tokens">
+              <i class="bi bi-send"></i> Send tokens
+            </NuxtLink>
+          </li>
+
           <!-- Notifications -->
           <li v-if="isActivated" class="nav-item p-1" @click="closeLeftSidebar">
             <NuxtLink class="nav-link" :class="$route.path.startsWith('/notifications') ? 'active' : ''" aria-current="page" to="/notifications">
@@ -88,20 +102,6 @@
           <li v-if="isActivated" class="nav-item p-1" @click="closeLeftSidebar">
             <NuxtLink class="nav-link" :class="$route.path.startsWith('/profile') ? 'active' : ''" aria-current="page" to="/profile">
               <i class="bi bi-person"></i> Profile
-            </NuxtLink>
-          </li>
-
-          <!-- Activity Points -->
-          <li class="nav-item p-1" @click="closeLeftSidebar" v-if="$config.showFeatures.activityPoints && $config.activityPointsAddress">
-            <NuxtLink class="nav-link" :class="$route.path.startsWith('/activity-points') ? 'active' : ''" aria-current="page" to="/activity-points">
-              <i class="bi bi-award"></i> Activity Points
-            </NuxtLink>
-          </li>
-
-          <!-- Send tokens -->
-          <li class="nav-item p-1" @click="closeLeftSidebar" v-if="$config.showFeatures.sendTokens">
-            <NuxtLink class="nav-link" :class="$route.path.startsWith('/send-tokens') ? 'active' : ''" aria-current="page" to="/send-tokens">
-              <i class="bi bi-send"></i> Send tokens
             </NuxtLink>
           </li>
 

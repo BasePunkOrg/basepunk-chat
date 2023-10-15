@@ -70,7 +70,7 @@ export default defineNuxtConfig({
       keysAddress: "0x9904CE72Cd7427F59bBe53bc69211081159fcf0a", // FriendKeys contract address 
       keysContext: "kjzl6cwe1jw146hahweqyxj4lwx0ffppekru48wiedk11nch15bg1ygmwfdz0cs",
       keysFeatured: ["admin", "tempe", "tekr"],
-      linkPreviews: "netlify", // "netlify" or "microlink" (or leave empty for no link previews)
+      linkPreviews: "", // "netlify" or "microlink" (or leave empty for no link previews)
       lpTokenAddress: "", // liquidity pool token (token to stake in the staking contract)
       lpTokenSymbol: "LP tokens", // LP token symbol
       marketplacePostNftUrl: "https://opensea.io/assets/base/0x8032d7a2b57B3F46861b0A46cE43DEc8281471C5",
@@ -128,7 +128,7 @@ export default defineNuxtConfig({
         "randomMintedPosts": true, 
         "swap": false, 
         "stake": false, 
-        "sendTokens": false, 
+        "sendTokens": true, 
         "spotify": false
       }, 
       showRepliesOnHomepage: true, // show replies on the homepage  
