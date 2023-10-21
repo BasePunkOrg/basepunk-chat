@@ -113,7 +113,7 @@ export default defineNuxtConfig({
       projectNftAddress: "0x89290b2FaD76bF4a6Ed9D8066f644d45530FA920", // if a project is NFT community around a specific NFT, enter the NFT address here
       projectTwitter: "https://twitter.com/Punkonbase",
       projectUrl: "https://chat.basepunk.xyz", // without trailing slash!
-      punkMinterAddress: "0xB5c4A61D3cAaa0dFFFAC59276DD219dD6Ba3DEFB", // punk domain minter contract address
+      punkMinterAddress: "0x1311E22ca19b25C5C19ADa1936E80d554e58790e", // punk domain minter contract address
       punkNumberOfPrices: 6, // number of different prices (based on domain length), usually 1 (price()) or 6 (price1char() - price6char())
       punkTldAddress: "0xc2C543D39426bfd1dB66bBde2Dd9E4a5c7212876", // punk domain TLD address
       randomPostsNumber: 1, // number of random post NFTs to show in the sidebar widget
