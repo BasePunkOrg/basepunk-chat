@@ -23,11 +23,11 @@
       <div class="mb-3 me-auto">NFT Launchpad</div>
       
       <div class="mb-3">
-        <NuxtLink class="btn btn-outline-primary btn-sm" to="/nft/create">
-          <i class="bi bi-plus-circle"></i> Create
+        <NuxtLink class="btn btn-primary btn-sm" to="/nft/create">
+          <i class="bi bi-plus-circle"></i> Create NFT
         </NuxtLink>
-        <button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#searchNftModal">
-          <i class="bi bi-search"></i> Find
+        <button class="btn btn-primary btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#searchNftModal">
+          <i class="bi bi-search"></i> Find NFT
         </button>
       </div>
     </h3>
