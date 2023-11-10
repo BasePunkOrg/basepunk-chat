@@ -63,6 +63,13 @@
           </li>
           -->
 
+          <!-- Swap -->
+          <li class="nav-item p-1" @click="closeLeftSidebar" v-if="$config.swapRouterAddress && $config.showFeatures.swap">
+            <NuxtLink class="nav-link" :class="$route.path.startsWith('/swap') ? 'active' : ''" aria-current="page" to="/swap">
+              <i class="bi bi-arrow-down-up"></i> Swap
+            </NuxtLink>
+          </li>
+
           <!-- NFT Launchpad -->
           <li class="nav-item p-1" @click="closeLeftSidebar" v-if="$config.nftLaunchpadBondingAddress && $config.showFeatures.nftLaunchpad">
             <NuxtLink class="nav-link" :class="$route.path.startsWith('/nft') ? 'active' : ''" aria-current="page" to="/nft">
@@ -116,13 +123,6 @@
           <li class="nav-item p-1" @click="closeLeftSidebar" v-if="$config.stakingContractAddress && $config.showFeatures.stake">
             <NuxtLink class="nav-link" :class="$route.path.startsWith('/stake') ? 'active' : ''" aria-current="page" to="/stake">
               <i class="bi bi-cash-stack"></i> Stake & Earn
-            </NuxtLink>
-          </li>
-
-          <!-- Swap -->
-          <li class="nav-item p-1" @click="closeLeftSidebar" v-if="$config.swapRouterAddress && $config.showFeatures.swap">
-            <NuxtLink class="nav-link" :class="$route.path.startsWith('/swap') ? 'active' : ''" aria-current="page" to="/swap">
-              <i class="bi bi-arrow-down-up"></i> Swap
             </NuxtLink>
           </li>
           
