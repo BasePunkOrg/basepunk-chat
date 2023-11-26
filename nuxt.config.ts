@@ -69,7 +69,7 @@ export default defineNuxtConfig({
       iggyPostStatsAddress: "0xDA07Ef226E212f548979339BFEb13160C1d52f30",
       keysAddress: "0x9904CE72Cd7427F59bBe53bc69211081159fcf0a", // FriendKeys contract address 
       keysContext: "kjzl6cwe1jw146hahweqyxj4lwx0ffppekru48wiedk11nch15bg1ygmwfdz0cs",
-      keysFeatured: ["admin", "tempe", "tekr"],
+      keysFeatured: ["popy", "tempe", "tekr", "gogocrapto", "musk", "vitaminlove", "amulet"],
       linkPreviews: "", // "netlify" or "microlink" (or leave empty for no link previews)
       lpTokenAddress: "", // liquidity pool token (token to stake in the staking contract)
       lpTokenSymbol: "LP tokens", // LP token symbol
@@ -121,7 +121,7 @@ export default defineNuxtConfig({
       showFeatures: { // show/hide features in sidebars (if you have too many "true", make the sidebar scrollable --> sidebarLeftSticky: false)
         "activityPoints": true, 
         "airdrop": false, 
-        "friendKeys": false, 
+        "friendKeys": true, 
         "governance": false,
         "newsletter": false, 
         "nftLaunchpad": true, 
