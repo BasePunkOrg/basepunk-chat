@@ -62,6 +62,9 @@ export default defineNuxtConfig({
       expiryCollections: 1000 * 60 * 60 * 24 * 7, // must be in milliseconds (0 means no expiration)
       expiryUsernames: 1000 * 60 * 60 * 24 * 7, // must be in milliseconds (0 means no expiration)
       favicon: "/img/favicon.png",
+      fileUploadEnabled: true, // enable/disable file uploads (enable only if external file storage is used, e.g. IPFS via Spheron)
+      fileUploadSizeLimit: 1 * 1024 * 1024, // max file upload size in bytes (1 * 1024 * 1024 = 1 MB)
+      fileUploadTokenService: process.env.FILE_UPLOAD_SERVICE || "vercel", // "netlify" or "vercel" (or leave empty for no file uploads)
       getPostsLimit: 30, // number of posts to fetch from Orbis in the getPosts() function
       governanceUrl: "", // governance url (snapshot, Tally, etc.)
       iggyPostAddress: "0x8032d7a2b57B3F46861b0A46cE43DEc8281471C5",
@@ -70,13 +73,12 @@ export default defineNuxtConfig({
       keysAddress: "0x9904CE72Cd7427F59bBe53bc69211081159fcf0a", // FriendKeys contract address 
       keysContext: "kjzl6cwe1jw146hahweqyxj4lwx0ffppekru48wiedk11nch15bg1ygmwfdz0cs",
       keysFeatured: ["admin", "popy", "tempe", "tekr", "gogocrapto", "musk", "vitaminlove"],
-      linkPreviews: "", // "netlify" or "microlink" (or leave empty for no link previews)
+      linkPreviews: process.env.LINK_PREVIEW_SERVICE || "vercel", // "netlify", "vercel", or "microlink" (or leave empty for no link previews)
       lpTokenAddress: "", // liquidity pool token (token to stake in the staking contract)
       lpTokenSymbol: "LP tokens", // LP token symbol
       marketplacePostNftUrl: "https://opensea.io/assets/base/0x8032d7a2b57B3F46861b0A46cE43DEc8281471C5",
       marketplacePostNftItemUrl: "https://opensea.io/assets/base/0x8032d7a2b57B3F46861b0A46cE43DEc8281471C5/", // url (append nft id to it)
       marketplaceNftCollectionBaseUrl: "https://opensea.io/assets/base/", // url (append nft address to it)
-      maxImageUploadSizeMb: 1, // max image upload size in MB
       newsletterLink: "",
       nftDefaultRatio: 1, // default ratio for the NFT price bonding curve
       nftLaunchpadBondingAddress: "0xe7d4643aEB94117D9c2bc023aa28243264D448eE", // NFT launchpad with bonding curve contract address
@@ -117,7 +119,7 @@ export default defineNuxtConfig({
       punkNumberOfPrices: 6, // number of different prices (based on domain length), usually 1 (price()) or 6 (price1char() - price6char())
       punkTldAddress: "0xc2C543D39426bfd1dB66bBde2Dd9E4a5c7212876", // punk domain TLD address
       randomPostsNumber: 1, // number of random post NFTs to show in the sidebar widget
-      rpcCustom: process.env.RPC_CUSTOM || "https://mainnet.base.org", // Custom RPC URL
+      rpcCustom: process.env.RPC_CUSTOM || "https://base.blockpi.network/v1/rpc/public", // Custom RPC URL
       showFeatures: { // show/hide features in sidebars (if you have too many "true", make the sidebar scrollable --> sidebarLeftSticky: false)
         "activityPoints": true, 
         "airdrop": false, 
@@ -143,8 +145,7 @@ export default defineNuxtConfig({
       tldName: ".basepunk",
       tokenAddress: null, // leave null if it's a native token of the chain
       tokenDecimals: 18,
-      tokenSymbol: "ETH",
-      web3storageKey: process.env.WEB3_STORAGE_KEY || ""
+      tokenSymbol: "ETH"
     }
   },
   vite: {
