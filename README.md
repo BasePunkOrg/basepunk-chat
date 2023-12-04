@@ -2,7 +2,7 @@
 
 BasePunk Chat is a Web3 Social frontend website for BasePunk NFT community based on the [Iggy Social](https://iggy.social) framework. 
 
-It uses [Orbis SDK](https://github.com/OrbisWeb3/orbis-sdk) and Ceramic Network in the background. For domains it uses the [Punk Domains](https://punk.domains) protocol.
+It uses [Orbis SDK](https://github.com/OrbisWeb3/orbis-sdk) and Ceramic Network in the background. For domain names it uses the [Punk Domains](https://punk.domains) protocol.
 
 URL: https://chat.basepunk.xyz/
 
