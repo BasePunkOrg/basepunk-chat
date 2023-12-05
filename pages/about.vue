@@ -15,12 +15,12 @@
       <p class="text-break mt-3">
         BasePunk is presenting a new way of social media. A web3 social network built on top of decentralized technologies
         such as 
-        <a href="https://base.org/" target="_blank">Base</a>, 
-        <a href="https://ipfs.tech/" target="_blank">IPFS</a>, 
+        <a href="https://iggy.social/" target="_blank">Iggy, a Web3 Social framework,</a>,
+        <a href="https://punk.domains/" target="_blank">Punk Domains, a modular domain name protocol,</a>,
+        <a href="https://useorbis.com/" target="_blank">Orbis, a Web3 Social graph</a>, 
         <a href="https://ceramic.network/" target="_blank">Ceramic Network</a>, 
-        <a href="https://useorbis.com/" target="_blank">Orbis</a>, 
-        <a href="https://punk.domains/" target="_blank">Punk Domains</a>, and
-        <a href="https://iggy.social/" target="_blank">Iggy Social</a>.
+        <a href="https://ipfs.tech/" target="_blank">IPFS</a>, and
+        <a href="https://base.org/" target="_blank">Base, an L2 blockchain by Coinbase</a>.
       </p>
 
       <p class="text-break mt-3">
