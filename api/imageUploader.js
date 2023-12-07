@@ -2,10 +2,10 @@ const { SpheronClient, ProtocolEnum } = require("@spheron/storage");
 
 export default async function handler(request, response) {
   try {
-    const bucketName = process.env.SPHERON_BUCKET_NAME; // enter bucket name in environment variables
+    const bucketName = process.env.SPHERON_BUCKET_NAME; // add bucket name in environment variables
     const token = process.env.SPHERON_STORAGE_TOKEN; // add spheron storage token in environment variables
     
-    const protocol = ProtocolEnum.IPFS; // choose IPFS or Arweave
+    const protocol = ProtocolEnum.IPFS;
  
     const client = new SpheronClient({ token });
  
