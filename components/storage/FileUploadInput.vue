@@ -70,6 +70,8 @@ export default {
 
           let response = resp;
 
+          console.log("Response:", response);
+
           if (typeof(resp) === "string") {
             response = JSON.parse(resp);
           }
