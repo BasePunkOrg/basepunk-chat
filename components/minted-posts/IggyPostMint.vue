@@ -34,10 +34,13 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @click="mintPost" :disabled="!isActivated || waitingMint">
+        <button v-if="isSupportedChain" type="button" class="btn btn-primary" @click="mintPost" :disabled="!isActivated || waitingMint">
           <span v-if="waitingMint" class="spinner-border spinner-border-sm mx-1" role="status" aria-hidden="true"></span>
           Mint post for {{ postPrice }} {{ $config.tokenSymbol }}
         </button>
+
+        <!-- Switch Chain button -->
+        <SwitchChainButton v-if="isActivated && !isSupportedChain" :navbar="false" :dropdown="false" />
       </div>
     </div>
   </div>
@@ -49,6 +52,7 @@
 import { useEthers } from 'vue-dapp';
 import { ethers } from 'ethers';
 import { useToast } from "vue-toastification/dist/index.mjs";
+import SwitchChainButton from "~/components/SwitchChainButton.vue";
 import WaitingToast from "~/components/WaitingToast";
 import sanitizeHtml from 'sanitize-html';
 import { useUserStore } from '~/store/user';
@@ -67,6 +71,10 @@ export default {
       textPreview: null,
       waitingMint: false
     }
+  },
+
+  components: {
+    SwitchChainButton
   },
 
   created() {
@@ -88,7 +96,15 @@ export default {
       } else {
         return this.$config.orbisContext;
       }
-    }
+    },
+
+    isSupportedChain() {
+      if (this.chainId === this.$config.supportedChainId) {
+        return true;
+      } else {
+        return false;
+      }
+    },
   },
 
   methods: {
@@ -99,12 +115,12 @@ export default {
       });
 
       if (sanitizedText.length > 183) {
-        // this.textPreview = sanitizedText.replace(/[^\x00-\x7F]/g, "").substring(0, 180) + "..."; // uncomment if you want to remove non-ascii characters (e.g. emojis)
+        //this.textPreview = sanitizedText.replace(/[^\x00-\x7F]/g, "").substring(0, 180) + "..."; // uncomment if you want to remove non-ascii characters (e.g. emojis)
         this.textPreview = sanitizedText.substring(0, 180) + "...";
       } else if (sanitizedText.length === 0) {
         this.textPreview = "";
       } else {
-        // this.textPreview = sanitizedText.replace(/[^\x00-\x7F]/g, ""); // uncomment if you want to remove non-ascii characters (e.g. emojis)
+        //this.textPreview = sanitizedText.replace(/[^\x00-\x7F]/g, ""); // uncomment if you want to remove non-ascii characters (e.g. emojis)
         this.textPreview = sanitizedText;
       }
 
@@ -256,12 +272,12 @@ export default {
   },
 
   setup() {
-    const { address, isActivated, signer } = useEthers();
+    const { address, chainId, isActivated, signer } = useEthers();
     const toast = useToast();
     const userStore = useUserStore();
 
     return {
-      address, isActivated, signer, toast, userStore
+      address, chainId, isActivated, signer, toast, userStore
     }
   }
 }
