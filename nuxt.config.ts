@@ -120,7 +120,7 @@ export default defineNuxtConfig({
       punkNumberOfPrices: 6, // number of different prices (based on domain length), usually 1 (price()) or 6 (price1char() - price6char())
       punkTldAddress: "0xc2C543D39426bfd1dB66bBde2Dd9E4a5c7212876", // punk domain TLD address
       randomPostsNumber: 1, // number of random post NFTs to show in the sidebar widget
-      rpcCustom: process.env.RPC_CUSTOM || "https://base.blockpi.network/v1/rpc/public", // Custom RPC URL
+      rpcCustom: process.env.RPC_CUSTOM || "https://mainnet.base.org", // Custom RPC URL
       showFeatures: { // show/hide features in sidebars (if you have too many "true", make the sidebar scrollable --> sidebarLeftSticky: false)
         "activityPoints": true, 
         "airdrop": false, 
