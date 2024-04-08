@@ -25,10 +25,6 @@ export const useUserStore = defineStore({
 
   getters: {
     getCurentUserActivityPoints(state) {
-      if (state.projectNftBalance > 0) {
-        return state.activityPoints * 10; // 10 is activity points multiplier for project NFT holders
-      }
-
       return state.activityPoints;
     },
 

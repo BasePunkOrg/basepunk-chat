@@ -11,14 +11,14 @@ export async function getActivityPoints(userAddress, signer) {
   }
 
   const activityPointsInterface = new ethers.utils.Interface([
-    "function getTotalWeiSpent(address) view returns (uint256)",
+    "function getPoints(address user_) external view returns (uint256)",
   ]);
 
   const activityPointsContract = new ethers.Contract(config.activityPointsAddress, activityPointsInterface, provider);
 
-  const weiSpent = await activityPointsContract.getTotalWeiSpent(userAddress);
+  const weiSpent = await activityPointsContract.getPoints(userAddress);
   const ethSpent = ethers.utils.formatEther(weiSpent);
-  let activityPoints = Number(ethSpent) * config.activityPointsRatio;
+  let activityPoints = Number(ethSpent);
 
   if (activityPoints < 1) {
     activityPoints = activityPoints.toFixed(2);

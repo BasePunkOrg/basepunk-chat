@@ -50,8 +50,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      activityPointsAddress: "0x148088d4255C59E1088e37E7c2FE56F11e4c4f29",
-      activityPointsRatio: 10_000, 
+      activityPointsAddress: "0x9e9905FA405A5FC7Ee2DEB94CbAc089B4FE6f0Ef",
       airdropApAddress: "", // chat token claim for APs
       airdropClaimDomainsAddress: "", // chat token claim for domain holders
       blockExplorerBaseUrl: "https://basescan.org",
