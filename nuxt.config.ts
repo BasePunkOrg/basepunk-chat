@@ -61,7 +61,7 @@ export default defineNuxtConfig({
       expiryCollections: 1000 * 60 * 60 * 24 * 7, // must be in milliseconds (0 means no expiration)
       expiryUsernames: 1000 * 60 * 60 * 24 * 7, // must be in milliseconds (0 means no expiration)
       favicon: "/img/favicon.png",
-      fileUploadEnabled: true, // enable/disable file uploads (enable only if external file storage is used, e.g. IPFS via Spheron)
+      fileUploadEnabled: false, // enable/disable file uploads (enable only if external file storage is used, e.g. IPFS via Spheron)
       fileUploadSizeLimit: 1 * 1024 * 1024, // max file upload size in bytes (1 * 1024 * 1024 = 1 MB)
       fileUploadTokenService: process.env.FILE_UPLOAD_SERVICE || "vercel", // "netlify" or "vercel" (or leave empty for no file uploads)
       getPostsLimit: 30, // number of posts to fetch from Orbis in the getPosts() function
@@ -72,7 +72,7 @@ export default defineNuxtConfig({
       ipfsGateway: "https://cloudflare-ipfs.com/ipfs/",
       keysAddress: "0x9904CE72Cd7427F59bBe53bc69211081159fcf0a", // FriendKeys contract address 
       keysContext: "kjzl6cwe1jw146hahweqyxj4lwx0ffppekru48wiedk11nch15bg1ygmwfdz0cs",
-      keysFeatured: ["admin", "popy", "tempe", "tekr", "gogocrapto", "musk", "vitaminlove"],
+      keysFeatured: ["admin", "popy", "gogocrapto", "musk", "vitaminlove"],
       linkPreviews: process.env.LINK_PREVIEW_SERVICE || "vercel", // "netlify", "vercel", or "microlink" (or leave empty for no link previews)
       lpTokenAddress: "", // liquidity pool token (token to stake in the staking contract)
       lpTokenSymbol: "LP tokens", // LP token symbol
